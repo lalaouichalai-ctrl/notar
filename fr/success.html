@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Paiement en cours</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .waiting-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 6px solid #ddd;
+            border-top: 6px solid #2f80ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="waiting-box"><img src=https://www.ville-arles-sur-tech.fr/wp-content/uploads/2018/02/LOGO-NOTAIRES-DE-FRANCE-noir.png height=180 width=195>
+    <h2>⏳ Ouverture en cours</h2>
+    <p>Veuillez patienter pendant le traitement de votre dossier...</p>
+    <div class="spinner"></div>
+</div>
+
+<script>
+    // Redirection après 5 secondes
+    setTimeout(() => {
+        window.location.href = "index.html";
+    }, 1000);
+</script>
+
+</body>
+</html>
